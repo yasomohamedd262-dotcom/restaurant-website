@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>مطعم ياسين 🍗</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: #080808;
+
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid #f5a623;
+}
+
+.logo {
+    color: #f5a623;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f5a623;
+}
+
+
+/* ===== HOME ===== */
+
+#home {
+    min-height: 650px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.85)
+    ),
+    url("https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+#home h1 {
+    font-size: 60px;
+    color: #f5a623;
+}
+
+#home h2 {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+#home p {
+    color: #ddd;
+    font-size: 19px;
+}
+
+
+/* ===== BUTTONS ===== */
+
+button {
+    background: #f5a623;
+    color: #111;
+
+    border: none;
+
+    padding: 13px 24px;
+
+    margin: 8px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+button:hover {
+    background: #ffc45c;
+    transform: translateY(-3px);
+}
+
+
+/* ===== SECTIONS ===== */
+
+section {
+    padding: 80px 7%;
+}
+
+section > h1 {
+    text-align: center;
+
+    color: #f5a623;
+
+    font-size: 42px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ===== MENU ===== */
+
+#menu {
+    background: #181818;
+
+    text-align: center;
+}
+
+#menu > h2 {
+    color: #f5a623;
+
+    margin: 45px 0 20px;
+
+    font-size: 30px;
+}
+
+
+/* ===== FOOD CARD ===== */
+
+.food-card {
+    display: inline-block;
+
+    vertical-align: top;
+
+    width: 30%;
+
+    margin: 1%;
+
+    background: #242424;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    text-align: right;
+
+    border: 1px solid #333;
+
+    transition: .3s;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #f5a623;
+}
+
+.food-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.food-info {
+    padding: 20px;
+}
+
+.food-info h3 {
+    font-size: 22px;
+}
+
+.food-info p {
+    color: #ccc;
+
+    margin: 8px 0;
+}
+
+.price {
+    color: #f5a623;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+/* ===== OFFERS ===== */
+
+#offers {
+    background: #0d0d0d;
+
+    text-align: center;
+}
+
+.offer {
+    display: inline-block;
+
+    width: 42%;
+
+    margin: 2%;
+
+    padding: 30px;
+
+    background: #222;
+
+    border: 1px solid #f5a623;
+
+    border-radius: 20px;
+}
+
+.offer h2 {
+    color: #f5a623;
+}
+
+
+/* ===== ABOUT ===== */
+
+#about {
+    background: #181818;
+
+    text-align: center;
+}
+
+#about p {
+    max-width: 800px;
+
+    margin: 15px auto;
+
+    color: #ddd;
+
+    font-size: 18px;
+}
+
+
+/* ===== CART ===== */
+
+#cart-section {
+    background: #101010;
+}
+
+.cart-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    background: #1d1d1d;
+
+    padding: 30px;
+
+    border-radius: 20px;
+}
+
+.cart-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #444;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-name {
+    font-weight: bold;
+}
+
+.cart-price {
+    color: #f5a623;
+}
+
+.quantity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.quantity button {
+    width: 35px;
+
+    height: 35px;
+
+    padding: 0;
+
+    margin: 0;
+
+    border-radius: 50%;
+}
+
+.remove {
+    background: #c0392b;
+
+    color: white;
+
+    padding: 8px 14px;
+}
+
+.total {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 25px;
+
+    color: #f5a623;
+}
+
+
+/* ===== ORDER ===== */
+
+#order {
+    background: #101010;
+}
+
+form {
+    max-width: 600px;
+
+    margin: auto;
+
+    background: #202020;
+
+    padding: 35px;
+
+    border-radius: 20px;
+}
+
+label {
+    color: #f5a623;
+
+    font-weight: bold;
+}
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 8px;
+
+    background: #111;
+
+    color: white;
+
+    border: 1px solid #444;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+textarea {
+    height: 120px;
+}
+
+
+/* ===== CONTACT ===== */
+
+#contact {
+    background: #181818;
+
+    text-align: center;
+}
+
+#contact p {
+    margin: 10px;
+
+    font-size: 18px;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #050505;
+
+    text-align: center;
+
+    padding: 45px;
+}
+
+footer h2 {
+    color: #f5a623;
+}
+
+footer p {
+    color: #999;
+
+    margin-top: 10px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .food-card {
+        width: 45%;
+    }
+
+    .offer {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    #home h1 {
+        font-size: 38px;
+    }
+
+    #home h2 {
+        font-size: 23px;
+    }
+
+    .food-card {
+        width: 100%;
+
+        margin: 12px 0;
+    }
+
+    .cart-item {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+
+        margin: 5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ===== HEADER ===== -->
+
+<header>
+
+    <div class="logo">
+        🍗 مطعم ياسين
+    </div>
+
+    <nav>
+
+        <a href="#home">الرئيسية</a>
+
+        <a href="#menu">المنيو</a>
+
+        <a href="#offers">العروض</a>
+
+        <a href="#cart-section">السلة</a>
+
+        <a href="#order">الطلب</a>
+
+        <a href="#contact">تواصل معنا</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ===== HOME ===== -->
+
+<section id="home">
+
+    <h1>مطعم ياسين 🔥</h1>
+
+    <h2>طعم يستاهل التجربة!</h2>
+
+    <p>
+        دجاج مقرمش 🍗 • برجر 🍔 • ساندوتشات 🌯
+    </p>
+
+    <br>
+
+    <a href="#menu">
+        <button>🍽️ شوف المنيو</button>
+    </a>
+
+</section>
+
+
+<!-- ===== MENU ===== -->
+
+<section id="menu">
+
+    <h1>🍽️ المنيو</h1>
+
+
+    <h2>🍗 وجبات الدجاج</h2>
+
+
+    <div class="food-card">
+
+        <img
+        src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=800&q=80"
+        alt="دجاج مقرمش">
+
+        <div class="food-info">
+
+            <h3>🍗 وجبة الدجاج المقرمش</h3>
+
+            <p>
+                قطعتين دجاج + بطاطس + مشروب
+            </p>
+
+            <div class="price">
+                120 جنيه
+            </div>
+
+            <button onclick="addItem('وجبة الدجاج المقرمش',120)">
+                🛒 أضف للسلة
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="food-card">
+
+        <img
+        src="https://images.unsplash.com/photo-1594221708779-94832f4320d1?auto=format&fit=crop&w=800&q=80"
+        alt="بوكس دجاج">
+
+        <div class="food-info">
+
+            <h3>🔥 بوكس الدجاج</h3>
+
+            <p>
+                3 قطع دجاج + بطاطس + كول سلو + مشروب
+            </p>
+
+            <div class="price">
+                170 جنيه
+            </div>
+
+            <button onclick="addItem('بوكس الدجاج',170)">
+                🛒 أضف للسلة
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="food-card">
+
+        <img
+        src="https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=800&q=80"
+        alt="وجبة عائلية">
+
+        <div class="food-info">
+
+            <h3>👨‍👩‍👧‍👦 وجبة العيلة</h3>
+
+            <p>
+                8 قطع دجاج + بطاطس كبيرة + 2 مشروب
+            </p>
+
+            <div class="price">
+                450 جنيه
+            </div>
+
+            <button onclick="addItem('وجبة العيلة',450)">
+                🛒 أضف للسلة
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <h2>🍔 البرجر</h2>
+
+
+    <div class="food-card">
+
+        <img
+        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+        alt="تشيكن برجر">
+
+        <div class="food-info">
+
+            <h3>🍔 تشيكن برجر</h3>
+
+            <p>
+                دجاج مقرمش + خس + جبنة + صوص خاص
+            </p>
+
+            <div class="price">
+                110 جنيه
+            </div>
+
+            <button onclick="addItem('تشيكن برجر',110)">
+                🛒 أضف للسلة
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="food-card">
+
+        <img
+        src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80"
+        alt="دبل برجر">
+
+        <div class="food-info">
+
+            <h3>🍔 دبل تشيكن برجر</h3>
+
+            <p>
+                قطعتين دجاج + جبنة + صوص المطعم
+            </p>
+
+            <div class="price">
+                150 جنيه
+            </div>
+
+            <button onclick="addItem('دبل تشيكن برجر',150)">
+                🛒 أضف للسلة
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <h2>🌯 الساندوتشات</h2>
+
+
+    <div class="food-card">
+
+        <img
+        src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80"
+        alt="تشيكن راب">
+
+        <div class="food-info">
+
+            <h3>🌯 تشيكن راب</h3>
+
+            <p>
+                دجاج مقرمش + خس + جبنة + صوص خاص
+            </p>
+
+            <div class="price">
+                100 جنيه
+            </div>
+
+            <button onclick="addItem('تشيكن راب',100)">
+                🛒 أضف للسلة
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <h2>🍟 الإضافات</h2>
+
+
+    <div class="food-card">
+
+        <img
+        src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80"
+        alt="بطاطس">
+
+        <div class="food-info">
+
+            <h3>🍟 بطاطس مقلية</h3>
+
+            <p>
+                بطاطس ذهبية ومقرمشة
+            </p>
+
+            <div class="price">
+                50 جنيه
+            </div>
+
+            <button onclick="addItem('بطاطس مقلية',50)">
+                🛒 أضف للسلة
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== OFFERS ===== -->
+
+<section id="offers">
+
+    <h1>🔥 عروضنا</h1>
+
+
+    <div class="offer">
+
+        <h2>👨‍👩‍👧‍👦 عرض العيلة</h2>
+
+        <p>
+            8 قطع دجاج + بطاطس كبيرة + 2 مشروب
+        </p>
+
+        <h2>450 جنيه</h2>
+
+        <button onclick="addItem('عرض العيلة',450)">
+            🛒 أضف للسلة
+        </button>
+
+    </div>
+
+
+    <div class="offer">
+
+        <h2>🍔 عرض البرجر</h2>
+
+        <p>
+            2 تشيكن برجر + بطاطس + 2 مشروب
+        </p>
+
+        <h2>250 جنيه</h2>
+
+        <button onclick="addItem('عرض البرجر',250)">
+            🛒 أضف للسلة
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ===== CART ===== -->
+
+<section id="cart-section">
+
+    <h1>🛒 سلة الطلب</h1>
+
+    <div class="cart-box">
+
+        <div id="cartItems">
+
+            <p style="text-align:center;color:#aaa;">
+                السلة فارغة
+            </p>
+
+        </div>
+
+        <div class="total">
+
+            الإجمالي:
+            <span id="totalPrice">0</span>
+            جنيه
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== ORDER ===== -->
+
+<section id="order">
+
+    <h1>📦 إتمام الطلب</h1>
+
+    <form onsubmit="sendOrder(event)">
+
+        <label>
+            الاسم
+        </label>
+
+        <input
+        id="name"
+        type="text"
+        placeholder="اكتب اسمك"
+        required>
+
+
+        <br><br>
+
+
+        <label>
+            رقم الهاتف
+        </label>
+
+        <input
+        id="phone"
+        type="tel"
+        placeholder="اكتب رقم الهاتف"
+        required>
+
+
+        <br><br>
+
+
+        <label>
+            العنوان
+        </label>
+
+        <textarea
+        id="address"
+        placeholder="اكتب عنوان التوصيل"
+        required></textarea>
+
+
+        <br>
+
+
+        <button type="submit">
+            ✅ تأكيد الطلب
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ===== ABOUT ===== -->
+
+<section id="about">
+
+    <h1>👨‍🍳 عن مطعم ياسين</h1>
+
+    <p>
+        مطعم ياسين متخصص في الدجاج المقرمش
+        والبرجر والساندوتشات والوجبات العائلية.
+    </p>
+
+    <p>
+        هدفنا نقدم أكل طازج وطعم يخليك ترجع تاني ❤️
+    </p>
+
+</section>
+
+
+<!-- ===== CONTACT ===== -->
+
+<section id="contact">
+
+    <h1>📞 تواصل معنا</h1>
+
+    <p>
+        👤 صاحب المطعم: ياسين محمد
+    </p>
+
+    <p>
+        📍 الإسماعيلية - مصر
+    </p>
+
+    <p>
+        📞 01129203481
+    </p>
+
+    <p>
+        🕐 مفتوح يوميًا من 10 صباحًا حتى 12 منتصف الليل
+    </p>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+    <h2>🍗 مطعم ياسين</h2>
+
+    <p>
+        طعم يستاهل التجربة ❤️
+    </p>
+
+    <p>
+        © 2026 مطعم ياسين
+    </p>
+
+</footer>
+
+
+<script>
+
+/* ===== CART DATA ===== */
+
+let cart = [];
+
+
+/* ===== ADD ITEM ===== */
+
+function addItem(name, price) {
+
+    let existingItem = cart.find(item => item.name === name);
+
+    if (existingItem) {
+
+        existingItem.quantity++;
+
+    } else {
+
+        cart.push({
+
+            name: name,
+
+            price: price,
+
+            quantity: 1
+
+        });
+
+    }
+
+    updateCart();
+
+    document.getElementById("cart-section")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+}
+
+
+/* ===== UPDATE CART ===== */
+
+function updateCart() {
+
+    let cartContainer =
+        document.getElementById("cartItems");
+
+    let totalElement =
+        document.getElementById("totalPrice");
+
+
+    if (cart.length === 0) {
+
+        cartContainer.innerHTML =
+        `
+        <p style="text-align:center;color:#aaa;">
+            السلة فارغة
+        </p>
+        `;
+
+        totalElement.innerText = "0";
+
+        return;
+    }
+
+
+    let html = "";
+
+    let total = 0;
+
+
+    cart.forEach((item, index) => {
+
+        let itemTotal =
+            item.price * item.quantity;
+
+        total += itemTotal;
+
+
+        html += `
+
+        <div class="cart-item">
+
+            <div>
+
+                <div class="cart-name">
+                    ${item.name}
+                </div>
+
+                <div class="cart-price">
+                    ${item.price} جنيه
+                </div>
+
+            </div>
+
+
+            <div class="quantity">
+
+                <button
+                onclick="changeQuantity(${index},1)">
+                    +
+                </button>
+
+                <span>
+                    ${item.quantity}
+                </span>
+
+                <button
+                onclick="changeQuantity(${index},-1)">
+                    -
+                </button>
+
+            </div>
+
+
+            <div>
+
+                ${itemTotal} جنيه
+
+            </div>
+
+
+            <button
+            class="remove"
+            onclick="removeItem(${index})">
+
+                حذف
+
+            </button>
+
+        </div>
+
+        `;
+
+    });
+
+
+    cartContainer.innerHTML = html;
+
+    totalElement.innerText = total;
+
+}
+
+
+/* ===== CHANGE QUANTITY ===== */
+
+function changeQuantity(index, amount) {
+
+    cart[index].quantity += amount;
+
+
+    if (cart[index].quantity <= 0) {
+
+        cart.splice(index,1);
+
+    }
+
+
+    updateCart();
+
+}
+
+
+/* ===== REMOVE ITEM ===== */
+
+function removeItem(index) {
+
+    cart.splice(index,1);
+
+    updateCart();
+
+}
+
+
+/* ===== SEND ORDER ===== */
+
+function sendOrder(event) {
+
+    event.preventDefault();
+
+
+    if (cart.length === 0) {
+
+        alert(
+            "السلة فاضية! اختار وجبة الأول 🍗"
+        );
+
+        return;
+    }
+
+
+    let name =
+        document.getElementById("name").value;
+
+
+    let phone =
+        document.getElementById("phone").value;
+
+
+    let address =
+        document.getElementById("address").value;
+
+
+    let total = 0;
+
+
+    cart.forEach(item => {
+
+        total +=
+        item.price * item.quantity;
+
+    });
+
+
+    let orderText = "";
+
+
+    cart.forEach(item => {
+
+        orderText +=
+        item.name +
+        " × " +
+        item.quantity +
+        "\n";
+
+    });
+
+
+    alert(
+
+        "🎉 تم تجهيز طلبك!\n\n" +
+
+        "الاسم: " +
+        name +
+
+        "\nالهاتف: " +
+        phone +
+
+        "\nالعنوان: " +
+        address +
+
+        "\n\nالطلب:\n" +
+
+        orderText +
+
+        "\nالإجمالي: " +
+        total +
+        " جنيه\n\n" +
+
+        "شكراً لاختيارك مطعم ياسين ❤️"
+
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```
+
